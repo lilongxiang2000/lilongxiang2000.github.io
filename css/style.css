@@ -542,6 +542,7 @@ button {
 .markdown-body > table tr:nth-child(2n) {
   background-color: var(--second-background-color);
 }
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap");
 :root {
   --background-color: #fff;
   --second-background-color: #f7f7f7;
@@ -742,7 +743,7 @@ pre,
 }
 pre,
 code {
-  font-family: "Source Code Pro", consolas, Menlo;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 code {
   padding: 5px;
@@ -1476,7 +1477,7 @@ pre .javascript .function {
   white-space: nowrap;
 }
 .post-toc-wrap .post-toc .nav .nav-child {
-  display: block;
+  display: none;
 }
 .post-toc-wrap .post-toc .nav .active > .nav-child {
   display: block;
@@ -1570,6 +1571,23 @@ pre .javascript .function {
 }
 .progress-bar-container .pjax-progress-icon.show {
   visibility: visible;
+}
+.progress-bar-container .scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  visibility: hidden;
+  z-index: 1007;
+  background: var(--primary-color);
+  transition-property: color, background, box-shadow, border-color, width;
+  transition-delay: 0s, 0s, 0s, 0s, 0s;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.1s;
+  transition-timing-function: ease, ease, ease, ease, linear;
+}
+.progress-bar-container .scroll-progress-bar.hide {
+  display: none !important;
 }
 .header-wrapper {
   width: 100%;
